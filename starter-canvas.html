@@ -1,0 +1,17 @@
+<head>
+</head>
+<body>
+  <canvas id="canvas" width="512" height="384"></canvas>
+  <script>
+    var c=document.getElementById("canvas");
+    var ctx=c.getContext("2d");
+    ctx.fillStyle = "black";
+    ctx.fillRect(20,20,30,30);
+    var canvasWidth  = c.width;
+    var canvasHeight = c.height;
+    var imageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
+    var data = imageData.data;
+    ctx.putImageData(imageData, 0, 0);
+  </script>
+</body>
+
